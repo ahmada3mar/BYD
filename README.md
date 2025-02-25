@@ -33,7 +33,7 @@ Now you can install unlocked package installer
 
 ## Download PackageInstaller
 
-    https://
+    blob:https://github.com/e1fc8197-16fe-4598-ad15-c96af2413969
 
 
 using your phone or pc, connect to the ADB
