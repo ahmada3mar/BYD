@@ -1,48 +1,48 @@
+Here's a more professional and polished version of your text:  
 
-# BYD Enable ADB and install apps
+---
 
-Thsi repo will show you how to enable ADB/ Wirless ADB for BYD cars that cames afetr 2407 version.
+# BYD – Enable ADB & Install Apps  
 
-In the latest versions BYD disabled the normal development tools which prevent users from installing APKs. 
+This repository provides a step-by-step guide on how to enable ADB (Android Debug Bridge) and Wireless ADB on BYD cars running firmware versions released after 2407.  
 
-Follow these steps to enable ADB and sideload apps
+In the latest firmware updates, BYD has disabled standard developer tools, preventing users from installing APK files. This guide will help you bypass these restrictions and sideload apps onto your vehicle's system.  
 
-## Enable ADB
-    make sure youre connect your phone with the car via Blutooth
+## Enabling ADB  
 
-Dial this number 
-```
-*#91532547#*
-```
-Its will open a verfication menu with your IMEI number 
+1. Ensure your phone is connected to the car via **Bluetooth**.  
+2. Dial the following number on the car's infotainment system:  
 
-After that 
+   ```
+   *#91532547#*
+   ```
 
-go to this website to get the password 
+3. A verification menu will appear displaying your **IMEI number**.  
+4. Visit the following website to generate the required password:  
 
-    https://ahmada3mar.github.io/BYD/
+   👉 [BYD ADB Unlock Tool](https://ahmada3mar.github.io/BYD/)  
 
-enter your imei 
+5. Enter your **IMEI number** on the website.  
 
-    Make sure your car time's is the same as the website
+   ⚠ **Make sure your car’s time is synchronized with the website’s time.**  
 
+Once ADB is enabled, you can proceed with installing an **unlocked package installer** to allow APK sideloading.  
 
-Afetr Enabling the ADB 
+---
 
-Now you can install unlocked package installer 
+## Installing the Package Installer  
 
-## Download PackageInstaller
+1. **Download the Package Installer APK**:  
 
-    https://github.com/ahmada3mar/BYD/raw/refs/heads/main/PackageInstaller.apk
+   👉 [Download PackageInstaller.apk](https://github.com/ahmada3mar/BYD/raw/refs/heads/main/PackageInstaller.apk)  
 
+2. Connect your phone or PC to the car via ADB.  
+3. Install the Package Installer using the following command:  
 
-using your phone or pc, connect to the ADB
+   ```
+   adb install PackageInstaller.apk
+   ```
 
-```
-adb install PackageInstaller.apk
+Once installed, you will be able to install APK files via **USB** or **SD Card** without restrictions.  
 
-```
-
-# Afetr installation done you will be able to install apks via USB/ SDcard
-
-
+---
