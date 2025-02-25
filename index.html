@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input {
+            padding: 10px;
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        ul {
+            margin-top: 20px;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            background: #e9ecef;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Generate Secret</h2>
+        <input type="text" id="inputField" placeholder="Enter your IMEI">
+        <button onclick="generateSecret()">Submit</button>
+        <ul id="resultList"></ul>
+    </div>
+
+    <script>
+        function generateSecret() {
+            const inputValue = document.getElementById("inputField").value;
+            const resultList = document.getElementById("resultList");
+            
+            if (!inputValue.trim()) {
+                alert("Please enter a value");
+                return;
+            }
+            
+            fetch(`https://api.goodview-moving.com/api/gen-secret/${inputValue}`)
+                .then(response => response.json())
+                .then(data => {
+                    resultList.innerHTML = ""; // Clear previous results
+                    data.forEach(item => {
+                        const li = document.createElement("li");
+                        li.textContent = item;
+                        resultList.appendChild(li);
+                    });
+                })
+                .catch(error => console.error("Error fetching data:", error));
+        }
+    </script>
+</body>
+</html>
