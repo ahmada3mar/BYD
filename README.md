@@ -17,11 +17,12 @@ In the latest firmware updates, BYD has disabled standard developer tools, preve
    ```
 
 3. A verification menu will appear displaying your **IMEI number**.  
-4. Visit the following website to generate the required password:  
+4. Generate the required password:  
 
-   👉 [BYD ADB Unlock Tool](https://ahmada3mar.github.io/BYD/)  
+      - Visit the following website to 👉 [BYD Secret (online)](https://ahmada3mar.github.io/BYD/)
+      - OR Download 👉 [BYD Secret (offline)](https://github.com/ahmada3mar/BYD/raw/refs/heads/main/BYD%20Secret.apk)  
 
-5. Enter your **IMEI number** on the website.  
+6. Enter your **IMEI number** on the website.  
 
    ⚠ **Make sure your car’s time is synchronized with the website’s time.**  
 
